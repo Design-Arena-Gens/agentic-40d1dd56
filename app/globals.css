@@ -1,0 +1,35 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+  --max-width: 1200px;
+  --nav-height: 72px;
+}
+
+body {
+  @apply bg-canvas text-white font-body antialiased;
+}
+
+a {
+  @apply text-accent transition-colors duration-200 hover:text-white;
+}
+
+.canvas-overlay {
+  background: radial-gradient(circle at 20% 20%, rgba(255, 111, 97, 0.2), transparent 60%),
+    radial-gradient(circle at 80% 30%, rgba(91, 141, 239, 0.15), transparent 55%),
+    radial-gradient(circle at 50% 80%, rgba(255, 255, 255, 0.12), transparent 65%);
+}
+
+.glass-panel {
+  @apply bg-white/5 backdrop-blur-xl border border-white/10 rounded-3xl shadow-glow;
+}
+
+.section-title {
+  @apply text-3xl sm:text-5xl font-display tracking-tight;
+}
+
+.section-subtitle {
+  @apply text-base sm:text-lg text-white/70 max-w-2xl;
+}
